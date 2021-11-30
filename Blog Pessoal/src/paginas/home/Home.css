@@ -1,8 +1,19 @@
-body {
-  background-color: #3f4247;
-}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
-.home {
-  margin-top: 3.65cm;
-  margin-bottom: 3.65cm;
-}
+  }
+  
+  body {
+    background-color: #3f4247;
+  }
+  
+  .home {
+    margin-top: 3.65cm;
+    margin-bottom: 3.65cm;
+  }
+
+  .img-1{
+    margin-left: 2cm;
+  }

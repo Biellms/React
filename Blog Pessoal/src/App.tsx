@@ -1,14 +1,15 @@
 import React from 'react';
-import NavBar from './components/estaticos/navbar/NavBar';
+import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
-import './App.css';
+import Carrosel from './components/carrossel/CarouselComponent';
 import Home from './paginas/home/Home';
 
 function App() {
   return (
     <>
-      <NavBar />
-      <Home />
+      <Navbar />
+        <Carrosel />
+        <Home />
       <Footer />
     </>
   );
