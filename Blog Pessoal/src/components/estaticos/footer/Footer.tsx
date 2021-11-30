@@ -20,7 +20,7 @@ function Footer() {
                         <a href="https://github.com/Biellms" target="_blank" rel="noreferrer">(11) 95977-5765</a>
                     </div>
                     <div className="footer-heading footer-4">
-                        <h3>Gabriel Mendes ©copy Todos os Direitos Reservados</h3>
+                        <h3>Gabriel Mendes © Todos os Direitos Reservados</h3>
                     </div>
                 </div>
             </div>

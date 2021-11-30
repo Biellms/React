@@ -126,7 +126,7 @@ export default function NavBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap >
-            | Biel Blog |
+            Biel | Developers Blog
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
