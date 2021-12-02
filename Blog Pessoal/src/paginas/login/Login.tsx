@@ -12,7 +12,7 @@ const CssTextField = styled(TextField)({
       color: 'white',
     },
     '& .MuiInput-underline:after': {
-      borderBottomColor: '#303F9E',
+      borderBottomColor: '#4c63fc',
     },
     '& .MuiInputBase-input': {
       color: 'white',
@@ -26,20 +26,20 @@ const CssTextField = styled(TextField)({
         boxShadow:  '2px 2px 2px white',
       },
       '&.Mui-focused fieldset': {
-        borderColor: '#303F9E',
-        boxShadow:  '2px 2px #303F9E',
+        borderColor: '#4c63fc',
+        boxShadow:  '3px 3px 3px 3px #303F9E',
       },
     },
   });
 
 function Login() {
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid container direction='row' justifyContent='center' alignItems='center' className='grid-login' >
             <Grid xs={6} alignItems='center'>
                 <Box paddingX={20}>
                     <form>
                     <Typography variant="h3" gutterBottom color="initial" component="h3" align="center"
-                    style={{fontWeight: 'bold', color: 'white'}}>
+                    className='text-bold-login'>
                         Entrar
                     </Typography>
                     <CssTextField id='usuario' label='Usuário' variant='outlined' name='usuario' margin='normal'
@@ -48,7 +48,7 @@ function Login() {
                     type='password' fullWidth />
                     <Box marginTop={2} textAlign='center'>
                       <Link to='/home' className='text-decorator-none'>
-                        <Button type='submit' variant='contained' color='primary'>
+                        <Button type='submit' variant='contained' color='primary' className='botao-logar'>
                           Logar
                         </Button>
                       </Link>
@@ -56,16 +56,15 @@ function Login() {
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}> 
                       <Box marginRight={1}>
-                        <Typography variant='subtitle1' gutterBottom align='center' style={{color: 'aliceblue'}}>Não tem uma conta?</Typography>
+                        <Typography variant='subtitle1' gutterBottom align='center' className='text-login'>Não tem uma conta?</Typography>
                       </Box>
-                        <Typography variant='subtitle1' gutterBottom align='center' style={{fontWeight: 'bold', color: 'white'}}>Cadastre-se</Typography>
+                      <Link to='/cadastroUsuario' className='text-decorator-none'>
+                      <Typography variant='subtitle1' gutterBottom align='center' className='text-bold-login'>Cadastre-se</Typography>
+                      </Link>
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} style={{
-                backgroundImage: `url(https://i.imgur.com/d5bMdDJ.jpg)`,
-                backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
-            }}>
+            <Grid xs={6} className='grid-imagem-login'>
               </Grid>
         </Grid>
     );
