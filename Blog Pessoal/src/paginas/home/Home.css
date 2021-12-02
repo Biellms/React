@@ -1,8 +1,22 @@
-body {
+.grid-1 {
   background-color: #3f4247;
 }
 
-.home {
-  margin-top: 3.65cm;
-  margin-bottom: 3.65cm;
+.title-1 {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.botao {
+  border-color: white !important; 
+  background-color: #303235 !important; 
+  color: white !important;
+}
+
+.botao:hover {
+  background-color: #4f4f50 !important; 
+}
+
+.postagens {
+  background-color: #3f4247;
 }

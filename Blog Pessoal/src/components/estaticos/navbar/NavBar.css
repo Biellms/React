@@ -1,7 +1,21 @@
-header.MuiAppBar-colorPrimary {
-    background-color: #212227;
-}
-
 .MuiToolbar-root {
     justify-content: space-around;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.appbar {
+    background-color: #212227;
+    height: 2cm;
+    justify-content: space-around;
+    color: white;
+}
+
+.appbar a {
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
