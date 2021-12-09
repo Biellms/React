@@ -9,45 +9,45 @@ import { buscaId, deleteId } from '../../../services/Services';
 function DeletarTema() {
   
   let history = useHistory();
-    const { id } = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
-    const [tema, setTema] = useState<Tema>()
+  const { id } = useParams<{id: string}>();
+  const [token, setToken] = useLocalStorage('token');
+  const [tema, setTema] = useState<Tema>()
 
-    useEffect(() => {
-        if (token == "") {
-            alert("Você precisa estar logado")
-            history.push("/login")
-    
-        }
-    }, [token])
-
-    useEffect(() =>{
-        if(id !== undefined){
-            findById(id)
-        }
-    }, [id])
-
-    async function findById(id: string) {
-        buscaId(`/temas/${id}`, setTema, {
-            headers: {
-              'Authorization': token
-            }
-          })
-        }
-
-    function sim() {
-      history.push('/temas')
-      deleteId(`/temas/${id}`, {
-        headers: {
-          'Authorization': token
-        }
-      });
-      alert('Tema deletado com sucesso');
-    }
+  useEffect(() => {
+      if (token == "") {
+          alert("Você precisa estar logado")
+          history.push("/login")
   
-    function nao() {
-      history.push('/temas')
-    }
+      }
+  }, [token])
+
+  useEffect(() =>{
+      if(id !== undefined){
+          findById(id)
+      }
+  }, [id])
+
+  async function findById(id: string) {
+      buscaId(`/temas/${id}`, setTema, {
+          headers: {
+            'Authorization': token
+          }
+        })
+      }
+
+  function sim() {
+    history.push('/temas')
+    deleteId(`/temas/${id}`, {
+      headers: {
+        'Authorization': token
+      }
+    });
+    alert('Tema deletado com sucesso');
+  }
+
+  function nao() {
+    history.push('/temas')
+  }
 
   return (
     <>
