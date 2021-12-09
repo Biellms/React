@@ -1,9 +1,21 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
 import './NavBar.css';
 
 function NavBar() {
+
+  const [token, setToken] = useLocalStorage('token');
+  let history = useHistory()
+
+  function goLogout() {
+    setToken('')
+    alert('Usuário deslogado')
+    history.push('/login')
+  }
+
   return (
     <>
       <AppBar position="static">
@@ -19,30 +31,36 @@ function NavBar() {
             <Link to='/home' className='text-decorator-none'>
               <Box mx={1} className='pointer'>
                 <Typography variant="h6" color="inherit">
-                  <a className='txtmenu' href="/home"> Home </a>
+                  Home
                 </Typography>
               </Box>
             </Link>
+            <Link to='/posts' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
               <Typography variant="h6" color="inherit">
-                <a className='txtmenu'> Postagens </a>
+                Postagens
               </Typography>
             </Box>
+            </Link>
+            <Link to='/temas' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
               <Typography variant="h6" color="inherit">
-                <a className='txtmenu'>Temas</a>
+               Temas
               </Typography>
             </Box>
+            </Link>
+            <Link to='/formularioTema' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
               <Typography variant="h6" color="inherit">
-                <a className='txtmenu'> Cadastrar temas </a>
+                Cadastrar temas
               </Typography>
             </Box>
+            </Link>
           </Box>
           <Link to='/login' className='text-decorator-none'>
-            <Box mx={1} className='pointer'>
+            <Box mx={1} className='pointer' onClick={goLogout}>
               <Typography variant="h6" color="inherit">
-                <a className='txtmenu'> Logout </a>
+                Logout
               </Typography>
             </Box>
           </Link>
