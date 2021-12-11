@@ -12,71 +12,76 @@ import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
 import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
 import DeletarTema from './components/temas/deletarTema/DeletarTema';
 import CadastroTema from './components/temas/cadastroTema/CadastroTema';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
 
-    <Router>
+    <Provider store={store}>
 
-      <NavBar />
+      <Router>
 
-      <Switch>
-        <div style={{ minHeight: '100vh' }}>
-          <Route exact path="/">
-            <Login />
-          </Route>
+        <NavBar />
 
-          <Route path="/login">
-            <Login />
-          </Route>
+        <Switch>
+          <div style={{ minHeight: '100vh' }}>
+            <Route exact path="/">
+              <Login />
+            </Route>
 
-          <Route path="/cadastroUsuario">
-            <CadastroUsuario />
-          </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
 
-          <Route path="/temas">
-            <ListaTema />
-          </Route>
+            <Route path="/cadastroUsuario">
+              <CadastroUsuario />
+            </Route>
 
-          <Route path="/posts">
-            <ListaPostagem />
-          </Route>
+            <Route path="/temas">
+              <ListaTema />
+            </Route>
 
-          <Route path="/home">
-            <Home />
-          </Route>
+            <Route path="/posts">
+              <ListaPostagem />
+            </Route>
 
-          <Route exact path='/formularioPostagem'>
-            <CadastroPost />
-          </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
 
-          <Route exact path='/formularioPostagem/:id'>
-            <CadastroPost />
-          </Route>
+            <Route exact path='/formularioPostagem'>
+              <CadastroPost />
+            </Route>
 
-          <Route exact path='/formularioTema'>
-            <CadastroTema />
-          </Route>
+            <Route exact path='/formularioPostagem/:id'>
+              <CadastroPost />
+            </Route>
 
-          <Route exact path='/formularioTema/:id'>
-            <CadastroTema />
-          </Route>
+            <Route exact path='/formularioTema'>
+              <CadastroTema />
+            </Route>
 
-          <Route path='/deletarPostagem/:id'>
-            <DeletarPostagem />
-          </Route>
-          
-          <Route path='/deletarTema/:id'>
-            <DeletarTema />
-          </Route>
+            <Route exact path='/formularioTema/:id'>
+              <CadastroTema />
+            </Route>
 
-        </div>
-      </Switch>
+            <Route path='/deletarPostagem/:id'>
+              <DeletarPostagem />
+            </Route>
 
-      <Footer />
+            <Route path='/deletarTema/:id'>
+              <DeletarTema />
+            </Route>
 
-    </Router>
+          </div>
+        </Switch>
 
+        <Footer />
+
+      </Router>
+
+    </Provider>
   );
 }
 
