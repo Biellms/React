@@ -3,9 +3,10 @@ import { Typography, Box, Grid, Button } from '@material-ui/core';
 import './Home.css';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modealPostagem/ModalPostagem';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function Home() {
 
@@ -15,10 +16,19 @@ function Home() {
   );
 
   useEffect(() => {
-      if (token == "") {
-          alert("Você precisa estar logado")
-          history.push("/login")
-      }
+    if (token == "") {
+      toast.error('Usuário precisa estar logado!', {
+        position: 'top-center',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: 'colored',
+        progress: undefined,
+      });
+      history.push("/login")
+    }
   }, [token])
 
   return (
@@ -33,7 +43,9 @@ function Home() {
             <Box marginRight={1}>
               <ModalPostagem />
             </Box>
+            <Link to='/posts' className='text-decorator-none'>
             <Button variant="outlined" className='botao'>Ver Postagens</Button>
+            </Link>
           </Box>
         </Grid>
         <Grid item xs={6} >

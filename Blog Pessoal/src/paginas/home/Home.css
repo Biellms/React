@@ -20,3 +20,7 @@
 .postagens {
   background-color: #3f4247;
 }
+
+.text-decorator-none {
+  text-decoration: none;
+}
