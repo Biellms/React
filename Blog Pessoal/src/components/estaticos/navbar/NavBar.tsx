@@ -47,28 +47,28 @@ function NavBar() {
         <Box display="flex" justifyContent="start">
           <Link to='/home' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
-              <Typography variant="h6" color="inherit">
+              <Typography variant="h6" color="inherit" className='text-navbar'>
                 Home
               </Typography>
             </Box>
           </Link>
           <Link to='/posts' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
-              <Typography variant="h6" color="inherit">
+              <Typography variant="h6" color="inherit" className='text-navbar'>
                 Postagens
               </Typography>
             </Box>
           </Link>
           <Link to='/temas' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
-              <Typography variant="h6" color="inherit">
+              <Typography variant="h6" color="inherit" className='text-navbar'>
                 Temas
               </Typography>
             </Box>
           </Link>
           <Link to='/formularioTema' className='text-decorator-none'>
             <Box mx={1} className='pointer'>
-              <Typography variant="h6" color="inherit">
+              <Typography variant="h6" color="inherit" className='text-navbar'>
                 Cadastrar temas
               </Typography>
             </Box>
@@ -76,7 +76,7 @@ function NavBar() {
         </Box>
         <Link to='/login' className='text-decorator-none'>
           <Box mx={1} className='pointer' onClick={goLogout}>
-            <Typography variant="h6" color="inherit">
+            <Typography variant="h6" color="inherit" className='text-navbar'>
               Logout
             </Typography>
           </Box>
