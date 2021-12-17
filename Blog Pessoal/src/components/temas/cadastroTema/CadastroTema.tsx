@@ -135,7 +135,7 @@ function CadastroTema() {
     return (
         <Box justifyContent='center' display='flex'>
             <Box width={'47%'} margin={25} className='box-cadastrar-tema'>
-                <Card variant="outlined" className='card-tema'>
+                <Card variant="outlined" className='card-tema-cadastro'>
                     <CardContent>
                         <Container maxWidth="sm" className="topo">
                             <form onSubmit={onSubmit}>

@@ -12,7 +12,6 @@ import { toast } from 'react-toastify';
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
   let history = useHistory();
-
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
@@ -30,7 +29,6 @@ function ListaPostagem() {
         progress: undefined,
       });
       history.push("/login")
-
     }
   }, [token])
 

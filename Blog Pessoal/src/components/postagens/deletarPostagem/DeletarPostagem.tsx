@@ -72,34 +72,36 @@ function DeletarPostagem() {
 
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined" >
-          <CardContent>
-            <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar a Postagem:
-              </Typography>
-              <Typography color="textSecondary" >
-                {post?.titulo}
-              </Typography>
-            </Box>
+      <Box display='flex' justifyContent='center'>
+        <Box width={'20%'} margin={'18%'}>
+          <Card variant="outlined" className='card-deletar'>
+            <CardContent>
+              <Box justifyContent="center">
+                <Typography color="textSecondary" gutterBottom className='text-deletar'>
+                  Deseja deletar a Postagem:
+                </Typography>
+                <Typography color="textSecondary" className='text-deletar'>
+                  {post?.titulo}
+                </Typography>
+              </Box>
 
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-              <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                  Sim
-                </Button>
+            </CardContent>
+            <CardActions>
+              <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+                <Box mx={2}>
+                  <Button onClick={sim} variant="contained" className="botao-sim" size='large' color="primary">
+                    Sim
+                  </Button>
+                </Box>
+                <Box>
+                  <Button onClick={nao} variant="contained" className="botao-nao" size='large' color="secondary">
+                    Não
+                  </Button>
+                </Box>
               </Box>
-              <Box>
-                <Button onClick={nao} variant="contained" size='large' color="secondary">
-                  Não
-                </Button>
-              </Box>
-            </Box>
-          </CardActions>
-        </Card>
+            </CardActions>
+          </Card>
+        </Box>
       </Box>
     </>
   );

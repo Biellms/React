@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Box, Card, CardActions, CardContent, Button, Typography, Grid } from '@material-ui/core';
 import './ListaTema.css';
 import Tema from '../../../models/Tema';
 import { busca } from '../../../services/Services';
@@ -46,11 +46,10 @@ function ListaTema() {
 
   return (
     <>
-    <Box marginTop={5} marginBottom={10}>
+    <Grid className='container-tema'>
       {
         temas.map(tema => (
-          <Box justifyContent='center' display='flex'>
-            <Box m={2} width='20%'>
+            <Box justifyContent='center' display='flex' m={5}>
               <Card variant="outlined" className='card-tema'>
                 <CardContent>
                   <Typography gutterBottom className='text-postagem' align='center'>
@@ -80,10 +79,9 @@ function ListaTema() {
                 </CardActions>
               </Card>
             </Box>
-          </Box>
         ))
       }
-      </Box>
+      </Grid>
     </>
   );
 }

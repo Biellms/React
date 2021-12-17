@@ -30,7 +30,6 @@ function DeletarTema() {
         progress: undefined,
       });
       history.push("/login")
-      
     }
   }, [token])
 
@@ -73,33 +72,35 @@ function DeletarTema() {
 
   return (
     <>
-      <Box m={2}>
-        <Card variant="outlined">
-          <CardContent>
-            <Box justifyContent="center">
-              <Typography color="textSecondary" gutterBottom>
-                Deseja deletar o Tema:
-              </Typography>
-              <Typography color="textSecondary">
-                {tema?.descricao}
-              </Typography>
-            </Box>
-          </CardContent>
-          <CardActions>
-            <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
-              <Box mx={2}>
-                <Button onClick={sim} variant="contained" className="marginLeft" size='large' color="primary">
-                  Sim
-                </Button>
+      <Box display='flex' justifyContent='center'>
+        <Box width={'20%'} margin={'18%'}>
+          <Card variant="outlined" className='card-deletar'>
+            <CardContent>
+              <Box justifyContent="center">
+                <Typography color="textSecondary" gutterBottom className='text-deletar'>
+                  Deseja deletar o Tema:
+                </Typography>
+                <Typography color="textSecondary" className='text-deletar'>
+                  {tema?.descricao}
+                </Typography>
               </Box>
-              <Box mx={2}>
-                <Button onClick={nao} variant="contained" size='large' color="secondary">
-                  Não
-                </Button>
+            </CardContent>
+            <CardActions>
+              <Box display="flex" justifyContent="start" ml={1.0} mb={2} >
+                <Box mx={2}>
+                  <Button onClick={sim} variant="contained" className="botao-sim" size='large' color="primary">
+                    Sim
+                  </Button>
+                </Box>
+                <Box mx={2}>
+                  <Button onClick={nao} variant="contained" className="botao-nao" size='large' color="secondary">
+                    Não
+                  </Button>
+                </Box>
               </Box>
-            </Box>
-          </CardActions>
-        </Card>
+            </CardActions>
+          </Card>
+        </Box>
       </Box>
     </>
   );

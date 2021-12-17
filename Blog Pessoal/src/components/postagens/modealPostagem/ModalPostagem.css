@@ -3,6 +3,16 @@
 }
 
 .btnModal{
+    color: white !important;
     border-color: white !important;
-    background-color: white !important;
+    background-color: #e9c94b !important;
+}
+
+.btnModal:hover {
+    background-color: #867429 !important;
+    transition: 250ms;
+}
+
+.close-icon {
+    color: white !important;
 }

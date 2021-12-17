@@ -69,7 +69,6 @@ function Login() {
 
     try {
       await login('/usuarios/logar', userLogin, setToken)
-      
       toast.success('Usuário logado com sucesso!', {
         position: 'top-center',
         autoClose: 2000,

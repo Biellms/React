@@ -3,6 +3,8 @@
 }
 
 .card-tema {
+    width: 280px;
+    height: 160px;
     background-color: #212227 !important;
     border-color: white !important;
 }
@@ -32,4 +34,14 @@
 
 .botao-atualizar:hover {
     background-color: #253285 !important;
+}
+
+.container-tema {
+    display: flex;
+    justify-content: center;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5vw;
+    margin-left: 15%;
+    margin-right: 15%;
 }
