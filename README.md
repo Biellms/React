@@ -3,7 +3,7 @@
   <hr>
   </div>
   <div align = "center">
-  <p><b>Exercicios de React para a criação de um Blog pessoal, propostos pela Generation Brasil.</b>
+  <p><b>Conteúdo de exercicios em React para a criação de um Blog pessoal, propostos pela Generation Brasil.</b>
   </p>
   </div>
 
